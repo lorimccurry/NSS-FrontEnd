@@ -1,0 +1,222 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+
+.container{
+  width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+body{
+  background-color: #da3f9a;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.logo{
+  margin: 50px 0px 30px 0px;
+}
+
+ul{
+  margin-left: 180px;
+}
+
+ul li{
+  float: left;
+  margin-left: 20px;
+}
+
+a{
+  text-decoration: none;
+  color:#fdff22
+}
+
+.clear{
+  clear: both;
+  float: none;
+}
+
+h1{
+  margin: 30px 0px;
+  font-size: 60px;
+}
+
+h2{
+  font-size: 30px;
+  margin: 0px 70px;
+}
+
+iframe{
+  margin: 30px 0px;
+}
+
+p{
+  font-size: 20px;
+  margin: 0px 105px 30px 105px;
+}
+
+.arrow{
+  float: left;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
+.price{
+  font-size: 20px;
+  margin-right: 160px;
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+.cart{
+  font-size: 20px;
+  float: right;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #fdff22;
+  margin-right: 235px;
+  padding-top: 8px;
+}
+
+.cart a{
+  color: #da3f9a;
+  font-weight: bold;
+}
+
+/*Below is product page*/
+.products{
+  border: 1px solid black;
+  width: 700px;
+  height: 225px;
+  margin: 10px auto 0px auto;
+}
+
+.arrowproduct{
+  float: left;
+}
+
+.supersoaker{
+  float: left;
+}
+
+.football{
+  float:left;
+  margin-bottom: 50px;
+}
+
+.football img{
+  width: 300px;
+  height: 225px;
+}
+
+.name{
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.products .price{
+  margin: 50px auto 15px auto;
+}
+
+.products .cart{
+  margin-right: 120px;
+}
+/*End of product page*/
+
+/*Below is cart page*/
+h3{
+  font-size: 20px;
+  text-align: left;
+  margin-left: 225px;
+  margin-bottom: 25px;
+}
+
+.leftalign{
+  float: left;
+  margin-left: 225px;
+}
+
+.rightalign{
+  margin-right: -50px;
+}
+
+.shipping{
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.firstline{
+  width: 550px;
+  border-top: 1px solid white;
+  margin-left: 202px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.secondline{
+  width: 550px;
+  border-top: 1px solid white;
+  margin-left: 202px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.thirdline{
+  width: 550px;
+  border-top: 1px solid white;
+  margin-left: 202px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.rightalignbottom{
+  margin-right: -50px;
+  margin-bottom: 50px;
+}
+
+.leftalignbottom{
+  float: left;
+  margin-left: 225px;
+  margin-bottom: 50px;
+}
+/*End of cart page*/
+
+/* Turbo CSS Body */
+.turbo-background{
+  background-color: #148dd6;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+/*End of Turbo CSS Body*/
+
+/* FAQ CSS*/
+.faq {
+  text-align: left;
+}
+
+.faqalign{
+  text-align: center;
+  margin-top: 70px;
+}
+/*End of FAQ CSS*/
+
+/*Contact Page*/
+.contact{
+  text-align: center;
+  font-size: 20px;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+/*End of Contact Page*/
+
+/*Supersoaker CSS*/
+.SS-back {
+  background-color: #148dd6;
+}
+/*End of Supersoaker CSS*/
+
+/*Index CSS*/
+.main{
+  font-size: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
