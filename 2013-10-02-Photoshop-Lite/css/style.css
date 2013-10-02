@@ -1,0 +1,16 @@
+input {
+  float: left; }
+
+.box {
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  font: white;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+  font-size: 20px; }
+
+.clear {
+  clear: both; }
