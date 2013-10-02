@@ -1,0 +1,21 @@
+!!! 5
+%html{lang: 'en'}
+  %head
+    %meta{charset: 'utf-8'}
+    %title Bank of Nashville
+    %link{rel: 'stylesheet', href: 'css/normalize.css'}
+    %link{rel: 'stylesheet', href: 'css/style.css'}
+  %body
+    %h1 Bank of Nashville
+    %h2 when addition and subtraction is hard
+    %span Balance
+    %input#balance{type: 'text', value: '$1000.00'}
+    %section
+    %input#amount{type: 'text', placeholder: 'Enter an amount'}
+    %input#deposit{type: 'button', value: 'Deposit: show me the money!'}
+    %input#withdraw{type: 'button', value: 'Withdraw: Sad, take it away'}
+
+    %script{src: 'js/jquery-1.10.2.min.js'}
+    %script{src: 'js/underscore-min.js'}
+    %script{src: 'js/main.js'}
+

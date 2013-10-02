@@ -18,6 +18,8 @@ function volume(l, w, h)
   return area(l, w) * h; /*re-use fn above...could type formula out normally*/
 }
 
+power(2,3);
+
 function power(base, exp)
 {
   var product = 1; /*need a temp var equal to 1 so can run through starting at 1*/
@@ -43,6 +45,7 @@ function pig_greeting(salutation, name)
   return pig_latin(salutation) + ", " + pig_latin(name) + "!";
 }
 
+pig_sentence('saying hello in pig latin')
 function pig_sentence(sentence)
 {
   var words = sentence.split(" ");
