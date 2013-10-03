@@ -1,0 +1,21 @@
+#container
+{
+  padding-left: 50px;
+}
+
+ul
+{
+  float: left;
+  display: inline;
+  width: 100px;
+}
+
+#deposit_list > li
+{
+  color: green;
+}
+
+#withdraw_list > li
+{
+  color: red;
+}

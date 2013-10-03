@@ -12,7 +12,7 @@ function makingBoxes()
 
   for(var i = 0; i < numberOfBoxes; i++)
   {
-    var $div /*creating jquery object that can have methods*/= $('<div>'); /*creating a div marked by <>*/
+    var $div = $('<div>');/*creating jquery object that can have methods*/
     $div.addClass('box'); /*add class to div*/
     $div.text(i); /*changes text by iteration*/
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <div id='container'>
+    <head>
+      <meta charset='utf-8'>
+      <title>Template</title>
+      <link href='css/normalize.css' rel='stylesheet'>
+      <link href='css/style.css' rel='stylesheet'>
+    </head>
+    <bodY>
+      <header>
+        <h1>The Geek Bank</h1>
+        <img id='logo'>
+        <div id='logo_controls'>
+          <input id='url' placeholder='enter url' type='text'>
+          <input id='set_logo' type='button' value='Set Logo'>
+        </div>
+      </header>
+      <section>
+        <input id='balance' readonly type='text'>
+        <div id='balance_controls'>
+          <input id='start_balance' placeholder='enter starting balance' type='text'>
+          <input id='set_balance' type='button' value='Set Balance'>
+        </div>
+      </section>
+      <section>
+        <input id='amount' placeholder='enter amount' type='text'>
+        <input id='deposit' type='button' value='Deposit'>
+        <input id='withdraw' type='button' value='Withdraw'>
+      </section>
+      <section>
+        <h3>Transaction List</h3>
+        <ul id='deposit_list'>Deposits</ul>
+        <ul id='withdraw_list'>Withdraws</ul>
+      </section>
+      <script src='js/jquery-1.10.2.min.js'></script>
+      <script src='js/underscore-min.js'></script>
+      <script src='js/main.js'></script>
+    </bodY>
+  </div>
+</html>

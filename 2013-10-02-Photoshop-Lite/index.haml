@@ -6,15 +6,21 @@
     %link{rel: 'stylesheet', href: 'css/normalize.css'}
     %link{rel: 'stylesheet', href: 'css/style.css'}
   %body
-    %h1 Photoshop Lite!
-    %input#color{type: 'text', autofocus: true, placeholder: 'Add color'}
-    %input#add_color{type: 'button', value: 'Add Color'}
-    #brush.box
-    .clear
-    #colors
+    #container
+      %h1 Photoshop: Extra Foam!
+      %h2 ~I'll have what she's having~
+      %input#color{type: 'text', autofocus: true, placeholder: 'Add color'}
+      %input#add_color{type: 'button', value: 'Add Color!'}
+      %span#brush
+      #colors
+      .clear
+      %input#amount{type: 'text', placeholder: '3'}
+      %input#add_box{type: 'button', value: 'Add Boxes!'}
+      #boxes
+      .clear
 
 
-    %script{src: 'js/jquery-1.10.2.min.js'}
-    %script{src: 'js/underscore-min.js'}
-    %script{src: 'js/main.js'}
+      %script{src: 'js/jquery-1.10.2.min.js'}
+      %script{src: 'js/underscore-min.js'}
+      %script{src: 'js/main.js'}
 
