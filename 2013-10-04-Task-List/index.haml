@@ -1,0 +1,40 @@
+!!! 5
+%html{lang: 'en'}
+  %head
+    %meta{charset: 'utf-8'}
+    %title Organize Me!
+    %link{rel: 'stylesheet', href: 'css/normalize.css'}
+    %link{rel: 'stylesheet', href: 'css/style.css'}
+  %body
+    #container
+      %header
+        %h1 Organize Me!
+        %p When the list gets longer and longer
+        .clear
+      %section
+        #date_input
+          %h3 Due Date
+          %input#due_date{type: 'text', placeholder: 'enter due date'}
+        #task_input
+          %h3 Task
+          %input#task{type: 'text', placeholder: 'enter task'}
+        #color_input
+          %h3 Category Color
+          %input#color{type: 'text', placeholder: 'enter color'}
+        %input#add_task{type: 'button', value: 'Add Task!'}
+        .clear
+      %section#grid
+        %table
+          %tr.home
+            %th Due Date
+            %th Task
+            %th Color
+            %th Done?
+            %th Remove?
+            %th Priority?
+        .clear
+
+      %script{src: 'js/jquery-1.10.2.min.js'}
+      %script{src: 'js/underscore-min.js'}
+      %script{src: 'js/main.js'}
+

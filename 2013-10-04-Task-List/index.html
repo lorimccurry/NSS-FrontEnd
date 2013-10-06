@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Organize Me!</title>
+    <link href='css/normalize.css' rel='stylesheet'>
+    <link href='css/style.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div id='container'>
+      <header>
+        <h1>Organize Me!</h1>
+        <p>When the list gets longer and longer</p>
+        <div class='clear'></div>
+      </header>
+      <section>
+        <div id='date_input'>
+          <h3>Due Date</h3>
+          <input id='due_date' placeholder='enter due date' type='text'>
+        </div>
+        <div id='task_input'>
+          <h3>Task</h3>
+          <input id='task' placeholder='enter task' type='text'>
+        </div>
+        <div id='color_input'>
+          <h3>Category Color</h3>
+          <input id='color' placeholder='enter color' type='text'>
+        </div>
+        <input id='add_task' type='button' value='Add Task!'>
+        <div class='clear'></div>
+      </section>
+      <section id='grid'>
+        <table>
+          <tr class='home'>
+            <th>Due Date</th>
+            <th>Task</th>
+            <th>Color</th>
+            <th>Done?</th>
+            <th>Remove?</th>
+            <th>Priority?</th>
+          </tr>
+        </table>
+        <div class='clear'></div>
+      </section>
+      <script src='js/jquery-1.10.2.min.js'></script>
+      <script src='js/underscore-min.js'></script>
+      <script src='js/main.js'></script>
+    </div>
+  </body>
+</html>

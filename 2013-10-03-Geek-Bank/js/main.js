@@ -9,13 +9,13 @@ function initialize(){
   $('#set_balance').click(addStartBalance);
   $('#deposit').click(addDeposit);
   $('#withdraw').click(subtWithdraw);
-  $('#deposit_list').on('click', 'li', removeDeposit);
-  $('#withdraw_list').on('click', 'li', removeWithdraw);
+  $('#deposit_list').on('click', 'li', removeDeposit); /*check chyld's code for how to combine this*/
+  $('#withdraw_list').on('click', 'li', removeWithdraw);/*look for something w/ a .deposit or .withdraw that lives under parent #withdraw_list and perform removeWithdraw*/
 
 }
 
 function addLogo(){
-  var url = $('#url').val();
+  var url = $('#logo_url').val();
   $('#logo').attr('src', url);
   $('#logo_controls').hide();
   $('#amount').focus();
@@ -39,8 +39,9 @@ function addDeposit(){
   var $li = $('<li>');
   $li.text(amount);
   $('#deposit_list').append($li);
-}
 
+  clearInput();
+}
 
 function subtWithdraw(){
   var amount = $('#amount').val();
@@ -51,6 +52,8 @@ function subtWithdraw(){
   var $li = $('<li>');
   $li.text(amount);
   $('#withdraw_list').append($li);
+
+  clearInput();
 }
 
 function removeDeposit()
@@ -60,6 +63,7 @@ function removeDeposit()
   balance = balance - $depDetail;
   $('#balance').val('$' + balance + '.00');
   $(this).remove();
+  clearInput();
 }
 
 function removeWithdraw()
@@ -79,5 +83,8 @@ function withdrawFromBalance(balance, amount){
   return balance - amount;
 }
 
-
+function clearInput(){
+  $('#amount').val('');
+  $('#amount').focus();
+}
 

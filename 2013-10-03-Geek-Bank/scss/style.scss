@@ -1,6 +1,19 @@
+body
+{
+  background-color: rgba(131,152,107,.75);
+
+  color: #4C555B;
+}
+
 #container
 {
   padding-left: 50px;
+}
+
+h1
+{
+  color: #4C555B;
+  text-shadow: 1px 1px #D7D0B2;
 }
 
 ul
@@ -12,10 +25,25 @@ ul
 
 #deposit_list > li
 {
-  color: green;
+  color: #234214;
+  font-weight: bold;
+  list-style-type: none;
 }
 
 #withdraw_list > li
 {
-  color: red;
+  color: #CC0033;
+  font-weight: bold;
+  list-style-type: none;
+
+}
+
+#deposit_list > li:nth-child(even), #withdraw_list > li:nth-child(even)
+{
+  background-color: rgba(99,125,86,.75)
+}
+
+#deposit_list > li:nth-child(odd), #withdraw_list > li:nth-child(odd)
+{
+  background-color: rgba(99,125,86,.3)
 }
