@@ -44,10 +44,16 @@ p
   text-align: center;
 }
 
+#container > section:nth-child(2)
+{
+  margin-top: 10px;
+}
+
 #date_input, #task_input, #color_input
 {
   float: left;
   margin-right: 10px;
+  margin-left: 5px;
 }
 
 #due_date, #task, #color
@@ -57,13 +63,14 @@ p
 
 h3
 {
+  margin-top: 0;
   margin-bottom: 5px;
   font-size: 30px;
 }
 
 #add_task
 {
-  margin-top: 50px;
+  margin-top: 40px;
   margin-left: 40px;
   font-weight: bold;
   font-size: 30px;
@@ -74,7 +81,7 @@ h3
 {
   background-color: $parchment;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   border: 3px solid $almost_tan;
 }
 
@@ -88,6 +95,7 @@ td
 {
   font-family: arial;
   border-bottom: 1px solid $salmon;
+  font-size: 20px;
 }
 
 th
@@ -113,4 +121,9 @@ th
 {
   background-color: $complete;
   text-decoration: line-through;
+}
+
+.color
+{
+  border-radius: 10px;
 }

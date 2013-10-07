@@ -31,19 +31,24 @@ p {
   margin-bottom: 5px;
   text-align: center; }
 
+#container > section:nth-child(2) {
+  margin-top: 10px; }
+
 #date_input, #task_input, #color_input {
   float: left;
-  margin-right: 10px; }
+  margin-right: 10px;
+  margin-left: 5px; }
 
 #due_date, #task, #color {
   font-family: arial; }
 
 h3 {
+  margin-top: 0;
   margin-bottom: 5px;
   font-size: 30px; }
 
 #add_task {
-  margin-top: 50px;
+  margin-top: 40px;
   margin-left: 40px;
   font-weight: bold;
   font-size: 30px;
@@ -52,7 +57,7 @@ h3 {
 #grid {
   background-color: #fdf7d7;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   border: 3px solid #fbd9a9; }
 
 table {
@@ -61,7 +66,8 @@ table {
 
 td {
   font-family: arial;
-  border-bottom: 1px solid #d98054; }
+  border-bottom: 1px solid #d98054;
+  font-size: 20px; }
 
 th {
   font-size: 25px;
@@ -79,3 +85,6 @@ th {
 .complete {
   background-color: #d1d1b2;
   text-decoration: line-through; }
+
+.color {
+  border-radius: 10px; }

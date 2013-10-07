@@ -9,13 +9,18 @@ function initialize(){
   $('table').on('click', '.done', complete);
 }
 
+updateDisplay();
+
 function complete(){
   var $checkbox = $(this);
   var $tr = $checkbox.parent();
-  if (!$checkbox.hasClass('complete')){
-    $tr.addClass('complete').appendTo('table');
+  var $home = $('.home').val();
+  if ($tr.hasClass('complete')){
+    if(!$tr.prev().hasClass('home')){
+      $tr.removeClass('complete').insertAfter($home);
+    }
   } else {
-    $tr.removeClass('complete').prependTo('table');
+    $tr.addClass('complete').appendTo('table');
   }
 }
 
@@ -85,4 +90,13 @@ function addRow(){
   $tr.append($date, $task, $color, $done, $remove, $arrows);
   $('table').append($tr);
 
+  updateDisplay();
+
+}
+
+function updateDisplay(){
+  $('#due_date').val('');
+  $('#task').val('');
+  $('#color').val('');
+  $('#due_date').focus();
 }
