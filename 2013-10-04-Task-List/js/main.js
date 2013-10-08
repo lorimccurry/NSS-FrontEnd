@@ -13,11 +13,11 @@ updateDisplay();
 
 function complete(){
   var $checkbox = $(this);
-  var $tr = $checkbox.parent();
+  var $tr = $checkbox.parent(); /*could have said .closest('tr')*/
   var $home = $('.home').val();
   if ($tr.hasClass('complete')){
     if(!$tr.prev().hasClass('home')){
-      $tr.removeClass('complete').insertAfter($home);
+      $tr.removeClass('complete').insertAfter($home); /*css property 'inherit' will return the greyed background back to normal state*/
     }
   } else {
     $tr.addClass('complete').appendTo('table');
@@ -27,7 +27,7 @@ function complete(){
 function removeRow(){
   var $button = $(this);
   var $tr = $button.parent();
-  $tr.remove();
+  $tr.remove(); /*or $(this).closest('tr').remove()*/
 }
 
 function move(){
@@ -48,25 +48,26 @@ function addRow(){
 
   var $date = $('<td>');
   $date.addClass('date');
-  var dateInput = $('#due_date').val();
-  $date.text(dateInput);
-
   var $task = $('<td>');
   $task.addClass('task');
-  var taskInput = $('#task').val();
-  $task.text(taskInput);
-
   var $color = $('<td>');
   $color.addClass('color');
-  var color = $('#color').val();
-  $color.css('background-color', color);
-
   var $done = $('<td>');
   $done.addClass('done');
   var $remove = $('<td>');
   $remove.addClass('remove');
   var $arrows = $('<td>');
   $arrows.addClass('arrows');
+
+
+  var dateInput = $('#due_date').val();
+  $date.text(dateInput);
+
+  var taskInput = $('#task').val();
+  $task.text(taskInput);
+
+  var color = $('#color').val();
+  $color.css('background-color', color);
 
   var $checkbox = $('<input>');
   $checkbox.attr('type', 'checkbox');
