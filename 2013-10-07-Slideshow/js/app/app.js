@@ -24,7 +24,7 @@ function searchFlickr(){
 }
 
 function results(data) {
-  debugger;
+  // debugger;
   photos = data.photos.photo; /*received data from Flickr and stored in data.photos (the global var array above).photo*/
   timer = setInterval(createImage, 1000); /*time is in milliseconds, so 1000 is 1 second*/
 }
