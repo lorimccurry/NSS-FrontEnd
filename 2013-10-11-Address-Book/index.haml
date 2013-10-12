@@ -1,0 +1,46 @@
+!!! 5
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+%head
+  %meta{charset: "utf-8"}
+  %meta{name: "viewport", content: "width=device-width"}
+  %title My Peeps
+  %link{rel: "stylesheet", href: "css/normalize.css"}
+  %link{rel: "stylesheet", href: "css/foundation.css"}
+  %link{rel: "stylesheet", href: "css/app.css"}
+  %script{src: "js/vendor/custom.modernizr.js"}
+%body
+  .row#header
+    .small-12.columns
+      %img{src:"img/logo.jpg", alt:"my peeps logo"}
+      %h1 My Peeps 4-1-1
+  .row
+    .small-2.columns
+      %h6 Peep Name
+      %input#name{type: 'text', autofocus: true, placeholder: 'full name'}
+    .small-2.columns
+      %h6 Peep Address
+      %input#address{type: 'text', placeholder: 'street address'}
+    .small-2.columns
+      %h6 Peep Website
+      %input#website{type: 'text', placeholder: 'www.mypeeps.com'}
+    .small-2.columns
+      %h6 Peep Email
+      %input#email{type: 'text', placeholder: 'peeps@mypeeps.com'}
+    .small-2.columns
+      %h6 Peep Photo url
+      %input#photo{type: 'text', placeholder: 'www.mypeeps.com/peeps/jpg'}
+    .small-2.columns
+      %input#add.button.round.success{type: 'button', value: 'Add Peep!'}
+  .row
+    .small-12.columns
+      %h3 My Coop
+      #people
+
+
+  %script{src: 'js/vendor/jquery-1.10.2.js'}
+  %script{src: 'js/vendor/foundation.min.js'}
+  %script{src: 'js/vendor/underscore.js'}
+  %script{src: 'js/vendor/moment.min.js'}
+  %script{src: 'https://cdn.firebase.com/v0/firebase.js'}
+  %script{src: 'js/app/app.js'}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset='utf-8'>
+  <meta content='width=device-width' name='viewport'>
+  <title>My Peeps</title>
+  <link href='css/normalize.css' rel='stylesheet'>
+  <link href='css/foundation.css' rel='stylesheet'>
+  <link href='css/app.css' rel='stylesheet'>
+  <script src='js/vendor/custom.modernizr.js'></script>
+</head>
+<body>
+  <div class='row' id='header'>
+    <div class='small-12 columns'>
+      <img alt='my peeps logo' src='img/logo.jpg'>
+      <h1>My Peeps 4-1-1</h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>
+      <h6>Peep Name</h6>
+      <input autofocus id='name' placeholder='full name' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <h6>Peep Address</h6>
+      <input id='address' placeholder='street address' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <h6>Peep Website</h6>
+      <input id='website' placeholder='www.mypeeps.com' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <h6>Peep Email</h6>
+      <input id='email' placeholder='peeps@mypeeps.com' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <h6>Peep Photo url</h6>
+      <input id='photo' placeholder='www.mypeeps.com/peeps/jpg' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <input class='button round success' id='add' type='button' value='Add Peep!'>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-12 columns'>
+      <h3>My Coop</h3>
+      <div id='people'></div>
+    </div>
+  </div>
+  <script src='js/vendor/jquery-1.10.2.js'></script>
+  <script src='js/vendor/foundation.min.js'></script>
+  <script src='js/vendor/underscore.js'></script>
+  <script src='js/vendor/moment.min.js'></script>
+  <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+  <script src='js/app/app.js'></script>
+</body>

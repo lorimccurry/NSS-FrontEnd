@@ -25,7 +25,7 @@
     .small-2.columns
       %input#name{type: 'text', autofocus: true,  placeholder: 'Item name'}
     .small-1.columns
-      %input#amount{type: 'text',  placeholder: 'Count'}
+      %input#count{type: 'text',  placeholder: 'Count'}
     .small-1.columns
       %input#value{type: 'text', placeholder: 'Cost'}
     .small-2.columns
@@ -37,6 +37,11 @@
     .small-2.columns
       %input#add.button.small.success.radius{type: 'button', value: 'Add Item'}
   .row
+    .small-2.columns
+      %div Grand Total:
+    .small-10.columns
+      %div#grand-total
+  .row
     .small-12.columns
       %table#items
         %tr
@@ -46,7 +51,6 @@
           %th Room
           %th Condition
           %th Purchase Date
-
 
   %script{src: 'js/vendor/jquery-1.10.2.js'}
   %script{src: 'js/vendor/foundation.min.js'}
