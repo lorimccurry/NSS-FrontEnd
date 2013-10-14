@@ -10,8 +10,8 @@
   %link{rel: "stylesheet", href: "css/app.css"}
   %script{src: "js/vendor/custom.modernizr.js"}
 %body
-  .row#header
-    .small-12.columns
+  .row
+    .small-12.columns#header
       %img{src:"img/logo.jpg", alt:"my peeps logo"}
       %h1 My Peeps 4-1-1
   .row
@@ -31,7 +31,7 @@
       %h6 Peep Photo url
       %input#photo{type: 'text', placeholder: 'www.mypeeps.com/peeps/jpg'}
     .small-2.columns
-      %input#add.button.round.success{type: 'button', value: 'Add Peep!'}
+      %input#add.button.round{type: 'button', value: 'Add Peep!'}
   .row
     .small-12.columns
       %h3 My Coop

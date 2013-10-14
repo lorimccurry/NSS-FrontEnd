@@ -1,19 +1,33 @@
-#header > h1 img {
-  float: left; }
+body {
+  background-color: #edefee; }
 
 #header > img {
-  max-width: 50px; }
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 20%;
+  border-radius: 5px; }
+
+#header > h1 {
+  display: inline; }
+
+#header {
+  border-radius: 5px; }
 
 .person {
   float: left;
   display: block;
-  border: 1px solid black;
-  height: 200px;
+  border: 2px solid black;
+  height: 250px;
   width: 200px;
   margin-right: 10px;
-  text-align: center; }
+  text-align: center;
+  border-radius: 5px;
+  -moz-box-shadow: 5px 5px 5px #888;
+  -webkit-box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px #888; }
   .person a {
-    display: block; }
+    display: block;
+    font-size: .85em; }
   .person p {
     clear: left;
     margin-bottom: 0; }
@@ -22,7 +36,19 @@
   display: block;
   max-width: 90%;
   max-height: 50%;
-  margin: 5px auto; }
+  margin: 5px auto 7px;
+  border-radius: 5px;
+  -moz-box-shadow: 5px 5px 5px #888;
+  -webkit-box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px #888; }
 
 #add {
   margin-top: 20px; }
+
+.name {
+  font-weight: bold;
+  text-shadow: 1px 1px #666666; }
+
+.address {
+  font-style: italic;
+  font-size: .90em; }

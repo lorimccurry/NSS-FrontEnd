@@ -40,7 +40,6 @@ function addPerson(){
   $('#website').val('');
   $('#email').val('');
   $('#photo').val('');
-
 }
 
 //pulls changed data down down from cloud db to person var, passes that info into the createPerson fn to make a new person, pushes that to local db
@@ -52,17 +51,15 @@ function personAdded(snapshot){
 
 //constructs the actual person div w/ each item in it, turn that into a jquery super var so can add children elements in div w/ content, pushes that into #person div element
 function createPerson(person){
-  var personEntry = '<div class="person"><img class="photo"><p class="name"></p><p class="address"></p><a class="website" href= http:// + person.website></a><a class="email" href= mailto: + "person.email"></a></div>';
+  var personEntry = '<div class="person"><img class="photo"><p class="name"></p><p class="address"></p><a class="website"></a><a class="email"></a></div>';
   var $personEntry = $(personEntry);
   $personEntry.addClass(person);
-  // debugger;
 
-  // $personEntry.children('.photo').css('background-image', 'http://' + person.photo);
   $personEntry.children('.photo').attr('src', 'http://' + person.photo);
   $personEntry.children('.name').text(person.name);
   $personEntry.children('.address').text(person.address);
-  $personEntry.children('.website').text(person.website);
-  $personEntry.children('.email').text(person.email);
+  $personEntry.children('.website').text(person.website).attr('href', 'http://' + person.website);
+  $personEntry.children('.email').text(person.email).attr('href', 'mailto:' + person.email);;
 
   $('#people').prepend($personEntry);
 }

@@ -1,32 +1,47 @@
-#header > h1 img
+body
 {
-  float: left
-  // display: inline;
+  background-color: rgb(237,239,238);
 }
 
 #header > img
 {
-  max-width: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 20%;
+  border-radius: 5px;
 }
 
+#header > h1
+{
+  display: inline;
+}
 
-// img
-// {
-
-// }
+#header
+{
+  border-radius: 5px;
+  // background-color: rgb(1,40,96);
+  // background-color: rgb(71,127,191);
+  // background-color: rgb(144,185,209);
+  // border: 2px solid rgb(255,192,45);
+}
 
 .person
 {
   float: left;
   display: block;
-  border: 1px solid black;
-  height: 200px;
+  border: 2px solid black;
+  height: 250px;
   width: 200px;
   margin-right: 10px;
   text-align: center;
+  border-radius: 5px;
+  -moz-box-shadow: 5px 5px 5px #888;
+  -webkit-box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px #888;
     a
       {
         display: block;
+        font-size: .85em;
       }
     p
       {
@@ -40,10 +55,26 @@
   display: block;
   max-width: 90%;
   max-height: 50%;
-  margin: 5px auto;
+  margin: 5px auto 7px;
+  border-radius: 5px;
+  -moz-box-shadow: 5px 5px 5px #888;
+  -webkit-box-shadow: 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px #888;
 }
 
 #add
 {
   margin-top: 20px;
+}
+
+.name
+{
+  font-weight: bold;
+  text-shadow: 1px 1px #666666;
+}
+
+.address
+{
+  font-style: italic;
+  font-size: .90em;
 }

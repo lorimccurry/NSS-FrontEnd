@@ -20,8 +20,9 @@ while(name) /*the loop is based on this*/
 var avg_age;
 var sum_age = 0;
 
-for(var i = 0; i < dogs.length; i++)
+for(var i = 0; i < dogs.length; i++){
   sum_age += dogs[i].age; /*an array of dogs, i=individual dog, .age=individual dog's age*/
+}
 
 avg_age = sum_age / dogs.length;
 
