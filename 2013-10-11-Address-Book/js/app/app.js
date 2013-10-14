@@ -16,9 +16,10 @@ function initialize(){
   Δpeople = Δdb.child('person');
   $('#add').click(addPerson);
   Δpeople.on('child_added', personAdded);
+  $('#people').on('dblclick', '.person', removePerson);
 }
 
-//gets values from user input, creates person object and gives properties, pushes values to could db, the value pushed should trigger the personAdded(snapshot)
+//gets values from user input, creates person object and gives properties, pushes values to cloud db, the value pushed should trigger the personAdded(snapshot)
 function addPerson(){
   var name = $('#name').val();
   var address = $('#address').val();
@@ -63,3 +64,17 @@ function createPerson(person){
 
   $('#people').prepend($personEntry);
 }
+
+function removePerson(){
+ var personRemove = $(this).remove();
+
+
+
+}
+
+//this may sync cloud change to local
+// function personUpdated(snapshot){
+//     Δpeople.set(db.people);
+
+
+// }

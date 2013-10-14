@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  /*telling us whole canvas is in use; anything set to 100% is only in relation to the parent*/ }
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black; }
+
+#left, #right {
+  float: left; }
+
+#right {
+  width: 25%; }
+
+#left {
+  height: 100%;
+  width: 75%; }
