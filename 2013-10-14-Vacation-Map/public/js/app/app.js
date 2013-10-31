@@ -33,15 +33,15 @@ function initMap(lat, lng, zoom){
 // -------------------------------------------------------------------- //
 
 function clickSetZoom() {
-  var zoom = getValue('#zoom', parseInt); /*pulls out, removes what was there before, converts, repopulates*/
-  db.map.setZoom(zoom);
+  var zoom = getValue('#zoom', parseInt); /*pulls out, removes what was there before, converts, re-populates*/
+  db.map.setZoom(zoom); /*google provided fn*/
 }
 
 function clickGoLocation(){
   var name = $('#location-select').val();
   var location = _.find(db.locations, function(l){return l.name === name;});
   var latLng = new google.maps.LatLng(location.coordinates.lb, location.coordinates.mb);
-  db.map.setCenter(latLng);
+  db.map.setCenter(latLng); /*google provided fn*/
 }
 
 function clickAddLocation(){

@@ -1,0 +1,48 @@
+extends ../template/layout
+include ../mixins/form-helper
+
+block content
+  .row
+    .small-12.columns
+      h1.subheader New Movie
+    .small-10.columns
+  .row
+    .small-2.columns
+      a.button.tiny.radius.success.expand(href='/movies') Movie List
+    .small-10.columns
+  .row
+    form(action='/movies', method='post')
+  .row
+    .small-6.columns
+      mixin field('title', 'Title', 'When Harry Met Sally', true)
+    .small-6.columns
+  .row
+    .small-6.columns
+      mixin field('image', 'Image', 'whenharrymetsally.com/poster.png', false)
+    .small-6.columns
+  .row
+    .small-6.columns
+      mixin field('color', 'Color', 'blue', false)
+    .small-6.columns
+  .row
+    .small-6.columns
+      mixin field('rated', 'Rated', 'PG-13', false)
+    .small-6.columns
+  .row
+    .small-6.columns
+      mixin field('studio', 'Studio', 'Universal', false)
+    .small-6.columns
+  .row
+    .small-6.columns
+      mixin field('gross', 'Gross', '938429847932', false)
+    .small-6.columns
+  .row
+    .small-6.columns
+      mixin field('numTheatres', 'Number of Theatres', '100', false)
+    .small-6.columns
+  .row
+    .small-2.columns
+      button.tiny.expand.radius(type='submit') Save Movie
+    .small-10.columns
+
+

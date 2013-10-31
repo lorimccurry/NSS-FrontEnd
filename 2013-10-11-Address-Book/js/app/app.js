@@ -15,8 +15,9 @@ function initialize(){
   Δdb = new Firebase('https://address-book-lm.firebaseio.com/');
   Δpeople = Δdb.child('person');
   $('#add').click(addPerson);
-  Δpeople.on('child_added', personAdded);
+  Δpeople.on('child_added', dbPersonAdded);
   $('#people').on('dblclick', '.person', removePerson);
+  Δpeople.on('child_removed', personRemoved);
 }
 
 //gets values from user input, creates person object and gives properties, pushes values to cloud db, the value pushed should trigger the personAdded(snapshot)
@@ -44,14 +45,14 @@ function addPerson(){
 }
 
 //pulls changed data down down from cloud db to person var, passes that info into the createPerson fn to make a new person, pushes that to local db
-function personAdded(snapshot){
+function dbPersonAdded(snapshot){
   var person = snapshot.val();
-  createPerson(person);
+  createPersonHtml(person);
   db.people.push(person);
 }
 
 //constructs the actual person div w/ each item in it, turn that into a jquery super var so can add children elements in div w/ content, pushes that into #person div element
-function createPerson(person){
+function createPersonHtml(person){
   var personEntry = '<div class="person"><img class="photo"><p class="name"></p><p class="address"></p><a class="website"></a><a class="email"></a></div>';
   var $personEntry = $(personEntry);
   $personEntry.addClass(person);
@@ -60,16 +61,13 @@ function createPerson(person){
   $personEntry.children('.name').text(person.name);
   $personEntry.children('.address').text(person.address);
   $personEntry.children('.website').text(person.website).attr('href', 'http://' + person.website);
-  $personEntry.children('.email').text(person.email).attr('href', 'mailto:' + person.email);;
+  $personEntry.children('.email').text(person.email).attr('href', 'mailto:' + person.email);
 
   $('#people').prepend($personEntry);
 }
 
-function removePerson(){
+function removePersonHtml(){
  var personRemove = $(this).remove();
-
-
-
 }
 
 //this may sync cloud change to local
