@@ -2,3 +2,7 @@
 node_modules/
 _dist/
 _build/
+audios/
+videos/
+*.m4a
+*.mp3

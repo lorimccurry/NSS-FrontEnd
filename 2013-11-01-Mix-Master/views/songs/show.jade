@@ -1,0 +1,25 @@
+extends ../template/layout
+
+block content
+  .row
+    .small-12.columns
+      .song
+        h3= song.title
+  .row
+    .small-6.columns
+      .image-block
+        img#songArtDetail(src=song.art)
+        //- .reflection
+        //-   img#songArtDetail(src=song.art)
+        //-   .overlay
+    .small-6.columns
+      audio(src="/audios/#{song.filename}", controls=true)
+      p= song.duration
+      ul
+        each genre in song.genres
+          li= genere
+      p= song.lyrics
+      p= song.createdAt
+      form(action='/songs/#{song.id}', method='post')
+        input(type='hidden', name='_method', value='delete')
+        button.small.radius.alert(type='submit') Delete

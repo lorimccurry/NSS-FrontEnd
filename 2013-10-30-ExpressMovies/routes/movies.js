@@ -1,6 +1,6 @@
 var db = require('../modules/database');
 var file = __dirname + '/../db/movies.json';
-var Movie = require('../models/movie.js'); //***any time you call a constructor, it should be capitalized
+var Movie = require('../models/movie'); //***any time you call a constructor, it should be capitalized
 var _ = require('lodash');
 
 /*
@@ -46,6 +46,7 @@ exports.new = function(req, res){
 
 exports.create = function(req, res){
 
+    // console.log(req.body);
     var title = req.body.title;
     var image = req.body.image;
     var color = req.body.color;
@@ -56,7 +57,7 @@ exports.create = function(req, res){
 
     var movies = db.read(file);
     var movie = {title: title, image: image, color: color, rated: rated, studio: studio, gross: gross, numTheatres: numTheatres};
-    movies.push(movie);
+    movies.push(movie); //can push movies.push(req.body) ...since just pushing data into the movie, this works. BUT just pushes numbers as strings, so have to be sure to parseFloat and Int in the constructor!!
     db.write(file, movies);
     res.redirect('/movies');
 };
