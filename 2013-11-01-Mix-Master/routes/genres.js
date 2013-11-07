@@ -11,7 +11,6 @@ exports.index = function(req, res){
   });
 };
 
-
 /*
  * GET /genres/new
  */
@@ -28,7 +27,7 @@ exports.create = function(req, res){
   new Genre(req.body).save(function(err, genre, count){
     // debugger;
     if(err){
-      res.render('genres/new', {title: 'New Genre', errors: err.errors, genre: new Genre()}); //err is an object, errors is all of your errs that you'll pass into jade file (have access to err)
+      res.render('genres/new', {title: 'New Genre', err: err, genre: new Genre()}); //err is an object, errors is all of your errs that you'll pass into jade file (have access to err)
     }else{
       res.redirect('/genres');
     }

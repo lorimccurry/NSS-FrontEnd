@@ -23,3 +23,4 @@ block content
       form(action='/songs/#{song.id}', method='post')
         input(type='hidden', name='_method', value='delete')
         button.small.radius.alert(type='submit') Delete
+      span: a.button.tiny.radius(href='/songs/#{song.id}/edit') Edit

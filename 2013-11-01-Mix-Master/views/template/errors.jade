@@ -1,4 +1,18 @@
-if errors
-  ol
-    each error in errors
-      li= error.message
+if err
+  .error
+    .error-master= err.message
+    if err.errors
+      ol
+        each error in err.errors
+          li.error-list= error.message
+
+//- err.message: overall error message, and what's below are sub error msgs (sub-validations numbered)
+
+//- if error
+//-   .row
+//-     .small-12.columns
+//-       .errorMessages= error.message
+//-   .row
+//-     .small-12.columns
+//-       each item in error.errors
+//-         .errorMessage= item.message

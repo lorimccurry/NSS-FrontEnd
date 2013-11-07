@@ -18,7 +18,7 @@ block content
               label(for='bio') Bio:
               textarea#bio(name='lyrics')
           .row
-            small-12.columns
+            .small-12.columns
               each song in songs
                 input(type='checkbox', value=song.id, name='songids')
                 span= song.title
