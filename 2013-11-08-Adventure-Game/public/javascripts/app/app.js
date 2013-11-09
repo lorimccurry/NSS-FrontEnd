@@ -3,29 +3,39 @@ $(document).ready(initialize);
 function initialize(){
   $(document).foundation();
   $('form#form').on('submit', clickSubmitForm);
-  $('#cards').on('click', '.card', clickCard);
 }
 
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //
+
 
 function clickSubmitForm(e){
   var url = $(this).attr('action');
-  var data = $(this).serialize(); //serialize is only for a form to scrape data from it
+  var data = $(this).serialize();
   url = url + '/?' + data;
+
   sendGenericAjaxRequest(url, {}, 'post', null, e, function(data, status, jqXHR){
-    htmlAddCards(data);
+    // console.log(data);
+    htmlCreateBoard(data);
   });
+}
+// ------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------- //
+function htmlCreateBoard(game){
+  // debugger;
+  console.log(game);
+  // $('#board').attr('data-game-id', game._id);
+  // for(var i = 0; i < game.size; i++){
+  //   var $square = $('<div class="square"></div>').attr()
+
+  // }
+
 }
 
-function clickCard(e){
-  var url = '/games/' + $(this).parent().data('game-id');
-  var cardIndex = $(this).data('card-index');
-  sendGenericAjaxRequest(url, {cardIndex: cardIndex}, 'get', null, e, function(data, status, jqXHR){
-    htmlFlipCard(data);
-  });
-}
+
+
 
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //
@@ -46,19 +56,10 @@ function sendGenericAjaxRequest(url, data, verb, altVerb, event, successFn){ //1
   if(event) event.preventDefault(); //did you send a request, then call preventDefault, and if not, do default
 }
 
+
+
+
+
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //
-
-function htmlAddCards(game){
-  $('#cards').attr('data-game-id', game._id);
-  for(var i = 0; i < game.pieces; i++){
-    var $card = $('<div class="card"></div>').attr('data-card-index', [i]);
-    $('#cards').append($card);
-  }
-}
-
-function htmlFlipCard(game){
-  console.log(game);
-
-}
