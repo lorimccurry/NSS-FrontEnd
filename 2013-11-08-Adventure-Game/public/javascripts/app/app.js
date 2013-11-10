@@ -25,11 +25,28 @@ function clickSubmitForm(e){
 // ------------------------------------------------------------------------- //
 function htmlCreateBoard(game){
   // debugger;
-  console.log(game);
-  // $('#board').attr('data-game-id', game._id);
-  // for(var i = 0; i < game.size; i++){
-  //   var $square = $('<div class="square"></div>').attr()
 
+  console.log(game);
+  var boardSize = Math.pow(game.size, 2);
+  $('#gameBoard').attr('data-game-id', game._id);
+
+  $.each(game.board, function(index, square){
+    var $square = $('<div class="square"></div>');
+    // console.log($square);
+    $square.attr('data-square-position', index);
+    $square.css('height', 100/game.size + '%');
+    $square.css('width', 100/game.size + '%');
+    $('#gameBoard').append($square);
+  });
+
+  // for(var i = 0; i < boardSize; i++){
+  //   var $square = $('<div class="square"></div>').attr('data-card-index', [i]);
+
+  //   // var $square = $('<div class="square"></div>');
+  //   // $square.attr('data-square-position', [i]);
+  //   // $square.css('height', 100 / game.boardSize + '%');
+  //   // $square.css('width', 100 / game.boardSize + '%');
+  //   $('#gameBoard').append($square);
   // }
 
 }
@@ -55,10 +72,6 @@ function sendGenericAjaxRequest(url, data, verb, altVerb, event, successFn){ //1
   $.ajax(options); //send ajax request to server
   if(event) event.preventDefault(); //did you send a request, then call preventDefault, and if not, do default
 }
-
-
-
-
 
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //

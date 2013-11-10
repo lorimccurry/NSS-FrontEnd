@@ -8,7 +8,7 @@ var Game = mongoose.Schema({
   health        : Number,
   didWin        : {type: Boolean, default: false},
   player        : String,
-  createdAt     : {type: Date, default: Date.now},
+  createdAt     : {type: Date, default: Date.now}
 });
 
 Game.pre('save', function(next){
@@ -27,7 +27,8 @@ Game.pre('save', function(next){
 
     var index = _.map(this.board, function(n){return {index: n+1};});
 
-    this.board = _.merge(types, index);
+    // this.board = _.merge(types, index);
+    this.board = _.merge(types);
 
     // this.board = _.map(this.board, function(n){return {type: 'blank'};});
     // this.board[0].type = 'player';
