@@ -1,0 +1,13 @@
+extends ../template/layout
+block content
+  h1 New Color Page
+  form(action='/colors', method='post')
+    input(name='color', type='text', placeholder='#ffcc33', autofocus='true')
+    button(type='submit') Save Color
+
+
+//- <form action="" method="post">
+//-   <label for="POST-name">Name:</label>
+//-   <input id="POST-name" type="text" name="name">
+//-   <input type="submit" value="Save">
+//- </form>

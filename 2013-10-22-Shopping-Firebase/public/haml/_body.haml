@@ -1,0 +1,95 @@
+.row
+  .small-12.columns
+    %h1 Shop-a-holic
+.row
+  .small-2.columns
+    %input#product-image{type: 'text', placeholder: 'product image file?'}
+  .small-2.columns
+    %input#product-name{type: 'text', placeholder: 'product name?'}
+  .small-2.columns
+    %input#product-weight{type: 'text', placeholder: 'product weight?'}
+  .small-2.columns
+    %input#product-price{type: 'text', placeholder: 'product price?'}
+  .small-2.columns
+    %input#product-off{type: 'text', placeholder: 'percent off?'}
+  .small-2.columns
+    %input#add-product.button.radius.success{type: 'button', value: 'Add Product'}
+.row
+  .small-12.columns
+    %table#products
+      %tr
+        %th Image
+        %th Name
+        %th Weight
+        %th Price
+        %th Off
+        %th Sale
+.row
+  .small-12.columns
+    %input#previous.hidden.button.small.radius{type: 'button', value: 'Previous'}
+    %input#next.hidden.button.small.radius{type: 'button', value: 'Next'}
+.row
+  .small-3.columns
+    %input#customer-image{type: 'text', placeholder: 'customer image file?'}
+  .small-3.columns
+    %input#customer-name{type: 'text', placeholder: 'customer name?'}
+  .small-2.columns
+    %input#domestic{type: 'radio', name: 'address', value: 'domestic'} Domestic
+  .small-2.columns
+    %input#international{type: 'radio', name: 'address', value: 'international'} International
+  .small-2.columns
+    %input#add-customer.button.radius{type: 'button', value: 'Add Customer'}
+.row
+  .small-2.columns
+    %select#select-customer
+      %option Select Customer
+  .small-8.columns
+    %table#cart
+      %thead
+        %tr
+          %th Name
+          %th Count
+          %th Amount
+          %th Weight
+          %th Shipping
+          %th Total
+      %tbody
+      %tfoot
+        %tr
+          %td Grand Totals:
+          %td#cart-count
+          %td#cart-amount
+          %td#cart-weight
+          %td#cart-shipping
+          %td#cart-grand
+  .small-2.columns
+    %input#purchase.button.radius.success{type: 'button', value: 'Purchase'}
+.row
+  .small-12.columns
+    %table#orders
+      %thead
+        %tr
+          %th ID
+          %th Time
+          %th Customer
+          %th Products
+          %th Total
+          %th Shipping
+          %th Grand
+      %tbody
+      %tfoot
+        %tr
+          %th
+          %th
+          %th
+          %th
+          %th
+          %th
+          %th#revenue
+
+
+
+
+
+
+

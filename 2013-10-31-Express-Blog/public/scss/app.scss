@@ -1,0 +1,25 @@
+@import "foundation/variables";
+@import "foundation/components/global";
+@import "foundation/components/buttons";
+
+
+
+// .test {
+//   $bg:rgb(140,0,5);
+//   @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
+// }
+  // @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
+
+.test-button{
+  @include button-base;
+  @include button-size;
+  @include button-style(rgb(68,68,68));
+}
+
+.jade{
+  // @include button-base;
+  // @include button-size;
+  @include button-style(rgb(153,203,159));
+}
+
+

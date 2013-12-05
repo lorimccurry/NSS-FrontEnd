@@ -1,0 +1,12 @@
+span {
+  margin: 10px;
+  font-weight: bold; }
+
+.delete {
+  border: 1px solid black; }
+
+#history > li:nth-child(odd) {
+  background-color: #f79443; }
+
+#history > li:nth-child(even) {
+  background-color: #d6a781; }

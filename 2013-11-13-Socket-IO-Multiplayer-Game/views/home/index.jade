@@ -1,0 +1,39 @@
+extends ../template/layout
+
+- console.log(numbers);
+
+block content
+  - var numbers = [0,1,2,3,4,5,6,7,8,9];
+
+  .row
+    .small-6.columns
+      h1.subheader Multiplayer, Socket.io Game
+    .small-6.columns
+      h3.subheader#current-player
+  .row
+    .small-2.columns
+      input#game(type='text', name='game', placeholder='easy')
+    .small-2.columns
+      input#player(type='text', name='player', placeholder='bob')
+    .small-2.columns
+      input#color(type='text', name='color', placeholder='red')
+    .small-2.columns
+      button#start.small.expand Start
+    .small-4.columns
+  .row
+    .small-12.columns
+      table#game
+        tbody
+          each y in numbers
+            tr
+              each x in numbers
+                td.cell(data-x=x, data-y=y)
+                  .player-full
+                    .health
+                    .player
+                  .player1.hidden
+                    .health
+                    .player
+                  .player2.hidden
+                    .health
+                    .player

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset='utf-8'>
+  <meta content='width=device-width' name='viewport'>
+  <title>Foundation 4</title>
+  <link href='css/normalize.css' rel='stylesheet'>
+  <link href='css/foundation.css' rel='stylesheet'>
+  <link href='css/app.css' rel='stylesheet'>
+  <script src='js/vendor/custom.modernizr.js'></script>
+</head>
+<body>
+  <div class='row'>
+    <div class='small-12 columns'>
+      <h1>Super Stock Market Fun</h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>
+      <input autofocus id='symbol' placeholder='enter symbol' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <input id='quantity' placeholder='enter quantity' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <input class='button radius' id='buy' type='button' value='BUY'>
+    </div>
+    <div class='small-6 columns'></div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>
+      <input id='cash' placeholder='enter start balance' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <input class='button radius success' id='setCash' type='button' value='SET BALANCE'>
+    </div>
+    <div class='small-8 columns'></div>
+  </div>
+  <div class='row'>
+    <div class='small-4 small columns'>
+      <h5 id='cashBalance'></h5>
+    </div>
+    <div class='small-8 columns'></div>
+  </div>
+  <div class='row'>
+    <div class='small-4 columns'>
+      <h5 id='stockBalance'>Stock balance:</h5>
+    </div>
+    <div class='small-2 small-offset-4 columns'>
+      <input id='interval' placeholder='enter interval' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <input class='button radius success' id='setInterval' type='button' value='SET INTERVAL'>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-4 columns'>
+      <h4>Stock List</h4>
+    </div>
+    <div class='small 8-columns'></div>
+  </div>
+  <div class='row'>
+    <div class='small-12 column'>
+      <table>
+        <tr id='header'>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Quote</th>
+          <th>Purchased</th>
+          <th>Change</th>
+          <th>Total</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-4 small-offset-8 columns'>
+      <h5>Grand Total:</h5>
+    </div>
+  </div>
+  <script src='js/vendor/jquery-1.10.2.js'></script>
+  <script src='js/vendor/foundation.min.js'></script>
+  <script src='js/vendor/underscore.js'></script>
+  <script src='js/vendor/moment.min.js'></script>
+  <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+  <script src='js/app/app.js'></script>
+</body>

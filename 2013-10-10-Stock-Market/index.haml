@@ -1,0 +1,65 @@
+!!! 5
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+%head
+  %meta{charset: "utf-8"}
+  %meta{name: "viewport", content: "width=device-width"}
+  %title Foundation 4
+  %link{rel: "stylesheet", href: "css/normalize.css"}
+  %link{rel: "stylesheet", href: "css/foundation.css"}
+  %link{rel: "stylesheet", href: "css/app.css"}
+  %script{src: "js/vendor/custom.modernizr.js"}
+%body
+  .row
+    .small-12.columns
+      %h1 Super Stock Market Fun
+  .row
+    .small-2.columns
+      %input#symbol{type: 'text', autofocus: true, placeholder: 'enter symbol'}
+    .small-2.columns
+      %input#quantity{type: 'text', placeholder: 'enter quantity'}
+    .small-2.columns
+      %input#buy.button.radius{type: 'button', value: 'BUY'}
+    .small-6.columns
+  .row
+    .small-2.columns
+      %input#cash{type: 'text', placeholder: 'enter start balance'}
+    .small-2.columns
+      %input#setCash.button.radius.success{type: 'button', value: 'SET BALANCE'}
+    .small-8.columns
+  .row
+    .small-4.small.columns
+      %h5#cashBalance
+    .small-8.columns
+  .row
+    .small-4.columns
+      %h5#stockBalance Stock balance:
+    .small-2.small-offset-4.columns
+      %input#interval{type: 'text', placeholder: 'enter interval'}
+    .small-2.columns
+      %input#setInterval.button.radius.success{type: 'button', value: 'SET INTERVAL'}
+  .row
+    .small-4.columns
+      %h4 Stock List
+    .small.8-columns
+  .row
+    .small-12.column
+      %table#stocks
+        %tr
+          %th Name
+          %th Symbol
+          %th Quote
+          %th Purchased
+          %th Change
+          %th Total
+  .row
+    .small-4.small-offset-8.columns
+      %h5 Grand Total:
+
+
+  %script{src: 'js/vendor/jquery-1.10.2.js'}
+  %script{src: 'js/vendor/foundation.min.js'}
+  %script{src: 'js/vendor/underscore.js'}
+  %script{src: 'js/vendor/moment.min.js'}
+  %script{src: 'https://cdn.firebase.com/v0/firebase.js'}
+  %script{src: 'js/app/app.js'}

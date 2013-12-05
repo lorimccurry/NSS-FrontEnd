@@ -1,0 +1,16 @@
+table#todos
+  thead
+    tr
+      th Complete?
+      th Title
+      th Due Date
+      th Category
+  tbody
+    each todo in todos
+      tr(data-id=todo.id)
+        td: input(type='checkbox', checked=todo.isComplete)
+        td= todo.title
+        td= todo.dueDate
+        td= todo.category
+
+//- td= moment(todo.dueDate).format('dddd, MMMM Do YYYY')

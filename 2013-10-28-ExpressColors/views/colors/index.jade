@@ -1,0 +1,20 @@
+extends ../template/layout
+block content
+  h1 Color Page
+  a(href='/colors/new') New Color
+  ul
+    - each color in colors
+      li(style='color:#{color}; font-size:30px;')= color
+  //- /*will sub in the variable to make each word its own color*/
+  //- can inline style w/ any html attribute (will win over any other styline)-->  attribute name: attribute assigned value
+  //- each is like a loop that's going to run through 3 times (the length of the array)
+  //- h3= title
+  //- h4= color
+  //- h5= x
+  //- h5= y
+  //- p= colors
+  //- - var x = 3 /*won't show on screen - not running in browser*/
+  //- - var y = 2
+  //- h2= (x*y) /*this is js, and 6 is what the browser gets (end result)*/
+  //- - var word = 'funny'
+  //- h3 very #{word}
