@@ -26,33 +26,34 @@ function clickSubmitForm(e){
 function htmlCreateBoard(game){
   // debugger;
 
-  console.log(game);
+  // console.log(game);
   var boardSize = Math.pow(game.size, 2);
   $('#gameBoard').attr('data-game-id', game._id);
 
   $.each(game.board, function(index, square){
     var $square = $('<div class="square"></div>');
-    // console.log($square);
     $square.attr('data-square-position', index);
     $square.css('height', 100/game.size + '%');
     $square.css('width', 100/game.size + '%');
+    if(square.type === 'player'){
+      $square.addClass('player');
+      // console.log($('.square[data-square-position="' + index + '"]'));
+      // console.log(game.board[index]);
+    } else {
+      console.log('this didnt work');
+    }
+    //debugger;
     $('#gameBoard').append($square);
+
   });
 
-  // for(var i = 0; i < boardSize; i++){
-  //   var $square = $('<div class="square"></div>').attr('data-card-index', [i]);
+  // $('.square').
 
-  //   // var $square = $('<div class="square"></div>');
-  //   // $square.attr('data-square-position', [i]);
-  //   // $square.css('height', 100 / game.boardSize + '%');
-  //   // $square.css('width', 100 / game.boardSize + '%');
-  //   $('#gameBoard').append($square);
-  // }
 
+  // if(square.type === 'player'){
+  //     $square.addClass('player');
+    // }
 }
-
-
-
 
 // ------------------------------------------------------------------------- //
 // ------------------------------------------------------------------------- //
@@ -63,7 +64,7 @@ function sendGenericAjaxRequest(url, data, verb, altVerb, event, successFn){ //1
   options.url = url;
   options.type = verb; //main verb = only GET or POST
   options.data = data; //main data to send in (nothing in this case)
-  console.log(options.data);
+  // console.log(options.data);
 
   options.success = successFn;
   options.error = function(jqXHR, status, error){console.log(error);};

@@ -25,7 +25,7 @@ exports.create = function(req, res){
   // console.log(req.query);
 
   new Game(req.query).save(function(err, game){
-      console.log(game);
+      // console.log(game);
       res.send(game);
     });
 };
